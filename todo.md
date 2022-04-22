@@ -1,0 +1,2 @@
+- [ ] Change LuaLine z from progress -> LspInfo
+- [ ] Group plugins using require for easy delete
