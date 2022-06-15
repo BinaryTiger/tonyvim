@@ -170,6 +170,7 @@ local mappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
     s = { "<cmd>Telescope grep_string<cr>", "Grep String" },
+    S = { "<cmd>Telescope session-lens search_session<cr>", "Sessions" },
   },
 
   t = {

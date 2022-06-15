@@ -61,6 +61,8 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim" -- visual menu of multi key mapping for easier discovery
   use "rmagatti/auto-session" -- automatic session management
+  use "rmagatti/session-lens" -- auto-session telescope plugin
+
   -- visual
   use "RRethy/vim-illuminate" -- intelligently color words using LSP
   use "sainnhe/gruvbox-material" -- colorscheme
