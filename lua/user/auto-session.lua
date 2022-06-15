@@ -5,8 +5,8 @@ if not status_ok then
 	return
 end
 
-local status_ok, session_lens = pcall(require, "session-lens")
-if not status_ok then
+local status_ok_lens, session_lens = pcall(require, "session-lens")
+if not status_ok_lens then
   vim.notify("Could not load auto-session")
 	return
 end
