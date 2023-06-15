@@ -3,17 +3,23 @@ if not cmp_status_ok then
   return
 end
 
-local snip_status_ok, luasnip = pcall(require, "luasnip")
-if not snip_status_ok then
-  return
-end
-
-require("luasnip/loaders/from_vscode").lazy_load()
-
 local check_backspace = function()
   local col = vim.fn.col "." - 1
   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
+
+local snip_status_ok, luasnip = pcall(require, "luasnip")
+if not snip_status_ok then
+  vim.notify("Could not load LuaSnip")
+  return
+end
+
+luasnip.config.set_config({ -- Setting LuaSnip config
+  enable_autosnippets = true,
+  store_selection_keys = "<Tab>",
+})
+
+require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/snippets/"})
 
 --   פּ ﯟ   some other good icons
 local kind_icons = {

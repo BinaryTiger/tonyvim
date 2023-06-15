@@ -2,7 +2,7 @@ return {
   -- Example: how to set snippet parameters
   require("luasnip").snippet(
     { -- Table 1: snippet parameters
-      trig="hi",
+      trig="hi_test",
       dscr="An autotriggering snippet that expands 'hi' into 'Hello, world!'",
       regTrig=false,
       priority=100,
