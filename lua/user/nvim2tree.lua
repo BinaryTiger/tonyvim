@@ -1,6 +1,7 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- this is a comment
 require("nvim-tree").setup({
   sort_by = "name",
   update_focused_file = {
