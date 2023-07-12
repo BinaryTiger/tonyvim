@@ -34,6 +34,6 @@ vim.opt.sidescrolloff = 8
 vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
 
 -- disable built in completion
-vim.opt.shortmess:append "c" 
-vim.opt.iskeyword:append "-"
-vim.cmd "set whichwrap+=<,>,[,],h,l"
+vim.opt.shortmess:append("c")
+vim.opt.iskeyword:append("-")
+vim.cmd("set whichwrap+=<,>,[,],h,l")
