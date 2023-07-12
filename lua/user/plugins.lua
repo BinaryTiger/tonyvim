@@ -113,6 +113,21 @@ return packer.startup(function(use)
     config = [[ require("user.which2key") ]],
   })
 
+  use({
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = [[ require("user.copilot") ]],
+  })
+
+  use({
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup()
+    end
+  })
+
   -- completion & snippets
   use("L3MON4D3/LuaSnip")
   use({
@@ -218,15 +233,6 @@ return packer.startup(function(use)
   })
 
   -- use "akinsho/bufferline.nvim" -- buffers as "tabs"
-
-  -- use {
-  --     "zbirenbaum/copilot.lua",
-  --     cmd = "Copilot",
-  --     event = "InsertEnter",
-  --     config = function()
-  --         require("user.copilot")
-  --     end
-  -- }
 
   -- Treesitter
   use({
