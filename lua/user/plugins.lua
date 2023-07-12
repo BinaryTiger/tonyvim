@@ -92,6 +92,11 @@ return packer.startup(function(use)
   })
 
   use({
+    "akinsho/toggleterm.nvim",
+    config = [[ require("user.toggleterm") ]],
+  })
+
+  use({
     "lukas-reineke/indent-blankline.nvim",
     config = [[ require("user.indentline") ]],
   })
@@ -138,6 +143,7 @@ return packer.startup(function(use)
     config = function()
       require("user.lsp.options")
       require("user.lsp.keymaps")
+      require("user.lsp.configs")
     end,
     requires = {},
   })
@@ -211,7 +217,6 @@ return packer.startup(function(use)
     ft = { "ruby" },
   })
 
-  -- use "akinsho/toggleterm.nvim" -- terminal integration
   -- use "akinsho/bufferline.nvim" -- buffers as "tabs"
 
   -- use {

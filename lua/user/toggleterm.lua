@@ -1,7 +1,4 @@
-local status_ok, toggleterm = pcall(require, "toggleterm")
-if not status_ok then
-	return
-end
+local toggleterm = require("toggleterm")
 
 toggleterm.setup({
 	size = 20,
@@ -13,7 +10,7 @@ toggleterm.setup({
 	start_in_insert = true,
 	insert_mappings = true,
 	persist_size = true,
-	direction = "float",
+	direction = "horizontal",
 	close_on_exit = true,
 	shell = vim.o.shell,
 	float_opts = {
@@ -39,7 +36,7 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 local Terminal = require("toggleterm.terminal").Terminal
 
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
 function _LAZYGIT_TOGGLE()
 	lazygit:toggle()
 end
@@ -49,7 +46,7 @@ function _NODE_TOGGLE()
 	node:toggle()
 end
 
-local ruby = Terminal:new({ cmd = "pry", hidden = true })
+local ruby = Terminal:new({ cmd = "pry", hidden = true, direction = "float" })
 function _RUBY_TOGGLE()
 	ruby:toggle()
 end
