@@ -99,6 +99,7 @@ return packer.startup(function(use)
   use({
     "lukas-reineke/indent-blankline.nvim",
     config = [[ require("user.indentline") ]],
+    tag = "v2.20.8",
   })
 
   -- home page
