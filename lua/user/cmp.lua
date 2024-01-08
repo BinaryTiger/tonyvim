@@ -49,6 +49,7 @@ local kind_icons = {
   Operator = "",
   TypeParameter = "",
   Copilot = "",
+  Neorg = "",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
@@ -71,7 +72,7 @@ cmp.setup({
     }),
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
-    ["<CR>"] = cmp.mapping.confirm({ select = true }),
+    ["<CR>"] = cmp.mapping.confirm({ select = false }),
     -- super tab, depending on context
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -112,6 +113,7 @@ cmp.setup({
         nvim_lsp = "[LSP]",
         nvim_lua = "[NVIM_LUA]",
         luasnip = "[Snippet]",
+        neorg = "[NORG]",
         buffer = "[Buffer]",
         path = "[Path]",
         copilot = "[COPILOT]",
@@ -123,6 +125,7 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
     { name = "luasnip" },
+    { name = "neorg" },
     { name = "copilot" },
     { name = "buffer" },
     { name = "path" },

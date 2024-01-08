@@ -19,6 +19,14 @@ vim.cmd([[
     autocmd FileType markdown setlocal spell
   augroup end
 
+  augroup _norg
+    autocmd!
+    autocmd FileType norg setlocal wrap
+    autocmd FileType norg setlocal spell
+    autocmd FileType norg setlocal foldmethod=syntax
+    autocmd FileType norg normal zR
+  augroup end
+
   augroup _auto_resize
     autocmd!
     autocmd VimResized * tabdo wincmd =

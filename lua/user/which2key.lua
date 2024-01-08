@@ -159,6 +159,15 @@ local mappings = {
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
     S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols" },
   },
+  n = {
+    name = "neorg",
+    c = { "<cmd>Neorg keybind all core.looking-glass.magnify-code-block<cr>", "Edit Code Block" },
+    f = { "<cmd>Telescope neorg find_linkable<cr>", "Search" },
+    l = { "<cmd>Telescope neorg insert_file_link<cr>", "Link" },
+    m = { "<cmd>Neorg update-metadata<cr>", "Update metadata" },
+    M = { "<cmd>Neorg inject-metadata<cr>", "Inject metadata" },
+    p = { "<cmd>Neorg toggle-concealer<cr>", "Toggle Concealer" },
+  },
   s = {
     name = "Search",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },

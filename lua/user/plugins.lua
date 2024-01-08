@@ -44,8 +44,8 @@ packer.init({
 return packer.startup(function(use)
   -- meta packages
   use("wbthomason/packer.nvim") -- Have packer manage itself
-  use("nvim-lua/plenary.nvim") -- Useful lua functions used by lots of plugins
-  use("nvim-lua/popup.nvim")   -- An implementation of the Popup API from vim in Neovim
+  use("nvim-lua/plenary.nvim")  -- Useful lua functions used by lots of plugins
+  use("nvim-lua/popup.nvim")    -- An implementation of the Popup API from vim in Neovim
 
   -- utility functions to manage buffers
   use("moll/vim-bbye")
@@ -163,11 +163,6 @@ return packer.startup(function(use)
     requires = {},
   })
 
-  use({
-    "jose-elias-alvarez/null-ls.nvim",
-    config = [[ require("user.lsp.nullls") ]],
-  })
-
   -- highlight instances of words under cursor using LSP
   use("RRethy/vim-illuminate")
 
@@ -221,7 +216,7 @@ return packer.startup(function(use)
   use({
     "justinmk/vim-sneak",
     config = function()
-      vim.g["sneak#label"] = 0 -- enable for EasyMotion like labelling
+      vim.g["sneak#label"] = 0  -- enable for EasyMotion like labelling
       vim.g["sneak#s_next"] = 1 -- enable jump to next with s
     end,
   })
@@ -239,10 +234,20 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
     requires = {
-      "JoosepAlviste/nvim-ts-context-commentstring",
+      --"JoosepAlviste/nvim-ts-context-commentstring",
       "RRethy/nvim-treesitter-endwise",
     },
     config = [[ require("user.treesitter") ]],
+  })
+
+  use({
+    "nvim-neorg/neorg",
+    config = [[ require("user.norg") ]],
+    run = ":Neorg sync-parsers",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-neorg/neorg-telescope",
+    },
   })
 
   -- Automatically set up your configuration after cloning packer.nvim
