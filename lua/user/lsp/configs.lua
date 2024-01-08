@@ -80,3 +80,5 @@ require("lspconfig").ruby_ls.setup({
 -- })
 
 lspconfig.lua_ls.setup({})
+lspconfig.taplo.setup({})
+lspconfig.lemminx.setup({})

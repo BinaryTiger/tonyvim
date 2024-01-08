@@ -47,6 +47,10 @@ return packer.startup(function(use)
   use("nvim-lua/plenary.nvim")  -- Useful lua functions used by lots of plugins
   use("nvim-lua/popup.nvim")    -- An implementation of the Popup API from vim in Neovim
 
+  -- file type
+  use("kovetskiy/sxhkd-vim")
+  use("terrastruct/d2-vim")
+
   -- utility functions to manage buffers
   use("moll/vim-bbye")
 
@@ -226,6 +230,11 @@ return packer.startup(function(use)
   use({
     "thoughtbot/vim-rspec",
     ft = { "ruby" },
+  })
+
+  use({
+    "sukima/xmledit",
+    ft = { "xml" }
   })
 
   -- use "akinsho/bufferline.nvim" -- buffers as "tabs"
