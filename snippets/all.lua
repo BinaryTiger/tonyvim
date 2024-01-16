@@ -8,11 +8,12 @@ local d = ls.dynamic_node
 local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
+local helpers = require("user.helpers")
 
 return {
   s({trig="today", dscr="Today's date, iso8601"},
     {
-      t(os.date("%Y-%m-%d"))
+      f(helpers.today)
     }
   ),
 }

@@ -8,10 +8,7 @@ local d = ls.dynamic_node
 local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
-
-local function filename_no_ext(_, _, _)
-  return vim.fn.expand('%:t:r')
-end
+local helpers = require("user.helpers")
 
 return {
   s({trig="ticket_metadata", dscr="Create norg ticket metadata header"},
@@ -22,8 +19,8 @@ return {
         description: 
         authors: aracine
         categories: ticket
-        created: 2024-01-03T11:47:09-0500
-        updated: 2024-01-03T11:47:09-0500
+        created: <>T<>-0500
+        updated: <>T<>-0500
         version: 1.1.1
         @end
 
@@ -38,11 +35,54 @@ return {
         * Timeline
       ]],
       {
-        f(filename_no_ext),
-        f(filename_no_ext),
-        f(filename_no_ext),
+        f(helpers.filename_no_ext),
+        f(helpers.today),
+        f(helpers.now),
+        f(helpers.today),
+        f(helpers.now),
+        f(helpers.filename_no_ext),
+        f(helpers.filename_no_ext),
       },
       {delimiters = "<>"} -- manually specifying angle bracket delimiters
+    )
+  ),
+  s({trig="prod_day_loop", dscr="Create a production loop tracker for the day"},
+    fmt(
+      [[
+        * <>
+        ** <> - <>
+
+        *** Goal
+            - ( ) <>
+        *** Notes
+
+      ]],
+      {
+        f(helpers.today),
+        f(helpers.now),
+        f(helpers.now),
+        i(1),
+      },
+      {delimiters = "<>"}
+    )
+  ),
+
+  s({trig="prod_block_loop", dscr="Create a production loop tracker for the next block"},
+    fmt(
+      [[
+        ** <> - <>
+
+        *** Goal
+            - ( ) <>
+        *** Notes
+
+      ]],
+      {
+        f(helpers.now),
+        f(helpers.now),
+        i(1),
+      },
+      {delimiters = "<>"}
     )
   ),
 }
