@@ -25,6 +25,7 @@ vim.cmd([[
     autocmd FileType norg setlocal linebreak
     autocmd FileType norg setlocal spell
     autocmd FileType norg setlocal foldmethod=syntax
+    autocmd FileType norg setlocal conceallevel=3
     autocmd FileType norg normal zR
   augroup end
 

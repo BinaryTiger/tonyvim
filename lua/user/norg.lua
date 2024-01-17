@@ -23,6 +23,7 @@ norg.setup {
         default_workspace = "main"
       },
     },
+    ["core.summary"] = {},
     ["core.journal"] = {
       config = {
 
