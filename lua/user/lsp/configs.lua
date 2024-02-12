@@ -82,3 +82,14 @@ require("lspconfig").ruby_ls.setup({
 lspconfig.lua_ls.setup({})
 lspconfig.taplo.setup({})
 lspconfig.lemminx.setup({})
+lspconfig.gopls.setup({
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+      gofumpt = true,
+    },
+  },
+})
