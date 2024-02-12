@@ -50,6 +50,7 @@ return packer.startup(function(use)
   -- file type
   use("kovetskiy/sxhkd-vim")
   use("terrastruct/d2-vim")
+  use("elkowar/yuck.vim")
 
   -- utility functions to manage buffers
   use("moll/vim-bbye")
