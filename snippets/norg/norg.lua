@@ -10,6 +10,8 @@ local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
 local helpers = require("user.helpers")
 
+
+
 return {
   s({trig="ticket_metadata", dscr="Create norg ticket metadata header"},
     fmt(
@@ -23,7 +25,6 @@ return {
         updated: <>T<>-0500
         version: 1.1.1
         @end
-
 
         Link: {https://jobber.atlassian.net/browse/<>}[<>]
 
@@ -46,40 +47,18 @@ return {
       {delimiters = "<>"} -- manually specifying angle bracket delimiters
     )
   ),
-  s({trig="prod_day_loop", dscr="Create a production loop tracker for the day"},
-    fmt(
-      [[
-        * <>
-        ** <> - <>
-
-        *** Goal
-            - ( ) <>
-        *** Notes
-
-      ]],
-      {
-        f(helpers.today),
-        f(helpers.now),
-        f(helpers.now),
-        i(1),
-      },
-      {delimiters = "<>"}
-    )
-  ),
-
   s({trig="prod_block_loop", dscr="Create a production loop tracker for the next block"},
     fmt(
       [[
-        ** <> - <>
-
-        *** Goal
+        * <> - <>
+        ** Goal
             - ( ) <>
-        *** Notes
+        ** Notes
 
       ]],
       {
-        f(helpers.now),
-        f(helpers.now),
+        f(helpers.now, {}, {user_args = {0}}),
+        f(helpers.now, {}, {user_args = {1800}}),
         i(1),
       },
       {delimiters = "<>"}
