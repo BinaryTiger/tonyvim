@@ -24,11 +24,7 @@ norg.setup {
       },
     },
     ["core.summary"] = {},
-    ["core.journal"] = {
-      config = {
-
-      },
-    },
+    ["core.journal"] = {},
     ["core.completion"] = {
       config = {
         engine = "nvim-cmp",

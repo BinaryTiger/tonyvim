@@ -9,7 +9,7 @@ function helpers.today(_, _, _)
 end
 
 function helpers.now(_, _, _)
-  return os.date("%X")
+  return os.date("%H:%M")
 end
 
 return helpers
