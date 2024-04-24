@@ -167,6 +167,7 @@ local mappings = {
     m = { "<cmd>Neorg update-metadata<cr>", "Update metadata" },
     M = { "<cmd>Neorg inject-metadata<cr>", "Inject metadata" },
     p = { "<cmd>Neorg toggle-concealer<cr>", "Toggle Concealer" },
+    t = { "<cmd>Neorg journal today<cr>", "Today's journal entry"}
   },
   s = {
     name = "Search",
