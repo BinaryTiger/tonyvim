@@ -252,6 +252,11 @@ return packer.startup(function(use)
   })
 
   use({
+    "zk-org/zk-nvim",
+    config = [[ require("user.zk")]]
+  })
+
+  use({
     "nvim-neorg/neorg",
     config = [[ require("user.norg") ]],
     run = ":Neorg sync-parsers",
