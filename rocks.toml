@@ -40,6 +40,10 @@
 "which-key.nvim" = "2.1.0"
 "obsidian.nvim" = "3.7.9"
 
+[plugins.harpoon]
+git = "theprimeagen/harpoon"
+branch = "harpoon2"
+
 [plugins.vim-sneak]
 git = "justinmk/vim-sneak"
 rev = "1.10.0"
