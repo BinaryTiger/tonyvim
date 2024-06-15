@@ -39,6 +39,7 @@
 "tree-sitter-lua" = "scm"
 "which-key.nvim" = "2.1.0"
 "obsidian.nvim" = "3.7.9"
+auto-session = "2.0.1"
 
 [plugins.harpoon]
 git = "theprimeagen/harpoon"
