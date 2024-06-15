@@ -24,16 +24,9 @@ vim.cmd([[
     autocmd!
     autocmd FileType markdown setlocal wrap
     autocmd FileType markdown setlocal spell
-  augroup end
-
-  augroup _norg
-    autocmd!
-    autocmd FileType norg setlocal wrap
-    autocmd FileType norg setlocal linebreak
-    autocmd FileType norg setlocal spell
-    autocmd FileType norg setlocal foldmethod=syntax
-    autocmd FileType norg setlocal conceallevel=3
-    autocmd FileType norg normal zR
+    autocmd FileType markdown setlocal conceallevel=2
+    autocmd FileType markdown setlocal shiftwidth=2
+    autocmd FileType markdown setlocal tabstop=2
   augroup end
 
   augroup _auto_resize

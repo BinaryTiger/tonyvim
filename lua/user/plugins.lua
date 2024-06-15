@@ -200,6 +200,13 @@ return packer.startup(function(use)
     config = function()
       require("auto-session").setup({
         auto_session_suppress_dirs = { "~/", "~/src" },
+        pre_save_cmds = { "NvimTreeClose" },
+        save_extra_cmds = {
+          "NvimTreeOpen"
+        },
+        post_restore_cmds = {
+          "NvimTreeOpen"
+        },
         session_lens = {
           load_on_setup = true,
         },
@@ -252,18 +259,20 @@ return packer.startup(function(use)
   })
 
   use({
-    "zk-org/zk-nvim",
-    config = [[ require("user.zk")]]
+    "epwalsh/obsidian.nvim",
+    tag = "*",  -- recommended, use latest release instead of latest commit
+    requires = {
+      -- Required.
+      "nvim-lua/plenary.nvim",
+
+      -- see below for full list of optional dependencies 👇
+    },
+    config = [[ require("user.obsidian")]],
   })
 
   use({
-    "nvim-neorg/neorg",
-    config = [[ require("user.norg") ]],
-    run = ":Neorg sync-parsers",
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "nvim-neorg/neorg-telescope",
-    },
+    "dhruvasagar/vim-table-mode",
+    ft = { "markdown" }
   })
 
   -- Automatically set up your configuration after cloning packer.nvim
