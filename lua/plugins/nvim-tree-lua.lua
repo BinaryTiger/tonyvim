@@ -1,6 +1,7 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+--*nvim-tree.renderer.symlink_destination*
 require("nvim-tree").setup({
   sort_by = "name",
   update_focused_file = {
@@ -20,5 +21,8 @@ require("nvim-tree").setup({
         },
       },
     },
+  },
+  renderer = {
+    symlink_destination = false,
   },
 })
