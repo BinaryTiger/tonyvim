@@ -1,5 +1,6 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
+  vim.notify("Could not cmp")
   return
 end
 
@@ -22,6 +23,7 @@ luasnip.config.set_config({ -- Setting LuaSnip config
 
 require("luasnip.loaders.from_lua").lazy_load({ paths = "~/.config/nvim/snippets/" })
 
+--   פּ ﯟ   some other good icons
 local kind_icons = {
   Text = "󰊄",
   Method = "m",

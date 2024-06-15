@@ -1,12 +1,6 @@
 vim.o.timeout = true
 vim.o.timeoutlen = 300
 
-local status_ok, which_key = pcall(require, "which-key")
-if not status_ok then
-  vim.notify(status_ok)
-  return
-end
-
 local setup = {
   plugins = {
     marks = true,    -- shows a list of your marks on ' and `
@@ -109,7 +103,6 @@ local opts = {
 }
 
 local mappings = {
-  ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
@@ -199,5 +192,6 @@ local mappings = {
   },
 }
 
+local which_key = require("which-key")
 which_key.setup(setup)
 which_key.register(mappings, opts)

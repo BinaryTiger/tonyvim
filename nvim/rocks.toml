@@ -1,0 +1,57 @@
+# This is your rocks.nvim plugins declaration file.
+# Here is a small yet pretty detailed example on how to use it:
+#
+# [plugins]
+# nvim-treesitter = "semver_version"  # e.g. "1.0.0"
+
+# List of non-Neovim rocks.
+# This includes things like `toml` or other lua packages.
+[rocks]
+
+# List of Neovim plugins to install alongside their versions.
+# If the plugin name contains a dot then you must add quotes to the key name!
+[plugins]
+"alpha-nvim" = "scm"
+"cmp-buffer" = "scm"
+"cmp-cmdline" = "scm"
+"cmp-nvim-lsp" = "scm"
+"cmp-path" = "scm"
+"cmp_luasnip" = "scm"
+"comment.nvim" = "0.8.0"
+"gruvbox.nvim" = "2.0.0"
+"lualine.nvim" = "scm"
+"luasnip" = "2.3.0"
+"mason.nvim" = "1.10.0"
+"mason-lspconfig.nvim" = "1.29.0"
+"nvim-autopairs" = "scm"
+"nvim-lspconfig" = "0.1.8"
+"nvim-tree.lua" = "1.4.0"
+"plenary.nvim" = "scm"
+"popup.nvim" = "scm"
+"project.nvim" = "scm"
+"rocks-config.nvim" = "1.6.0"
+"rocks-git.nvim" = "1.5.1"
+"rocks-treesitter.nvim" = "scm"
+"rocks.nvim" = "2.31.0"
+"telescope.nvim" = "scm"
+"toggleterm.nvim" = "2.11.0"
+"tree-sitter-fish" = "scm"
+"tree-sitter-lua" = "scm"
+"which-key.nvim" = "2.1.0"
+"obsidian.nvim" = "3.7.9"
+
+[plugins.vim-sneak]
+git = "justinmk/vim-sneak"
+rev = "1.10.0"
+
+[plugins.nvim-cmp]
+git = "hrsh7th/nvim-cmp"
+branch = "main"
+
+[plugins.vim-table-mode]
+git = "dhruvasagar/vim-table-mode"
+branch = "master"
+
+[config]
+plugins_dir = "plugins/"
+auto_setup = true

@@ -1,8 +1,3 @@
-local status_ok, lualine = pcall(require, "lualine")
-if not status_ok then
-  return
-end
-
 local hide_in_width = function()
   return vim.fn.winwidth(0) > 80
 end
@@ -73,7 +68,7 @@ local spaces = function()
   return label .. vim.api.nvim_get_option_value("shiftwidth", { scope = "local" })
 end
 
-lualine.setup({
+require("lualine").setup({
   options = {
     icons_enabled = true,
     theme = "auto",
