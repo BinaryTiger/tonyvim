@@ -56,6 +56,10 @@ branch = "main"
 git = "dhruvasagar/vim-table-mode"
 branch = "master"
 
+[plugins.gitsigns]
+git = "lewis6991/gitsigns.nvim"
+rev = "v0.9.0"
+
 [config]
 plugins_dir = "plugins/"
 auto_setup = true
