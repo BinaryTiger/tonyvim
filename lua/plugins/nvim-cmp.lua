@@ -51,7 +51,6 @@ local kind_icons = {
   Operator = "",
   TypeParameter = "",
   Copilot = "",
-  Neorg = "",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
@@ -112,7 +111,6 @@ cmp.setup({
         nvim_lsp = "[LSP]",
         nvim_lua = "[NVIM_LUA]",
         luasnip = "[Snippet]",
-        neorg = "[NORG]",
         buffer = "[Buffer]",
         path = "[Path]",
         copilot = "[COPILOT]",
@@ -124,7 +122,6 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
     { name = "luasnip" },
-    { name = "neorg" },
     { name = "copilot" },
     { name = "buffer" },
     { name = "path" },

@@ -4,6 +4,10 @@ require("obsidian").setup({
       name = "personal",
       path = "~/notes/obsidian/personal",
     },
+    {
+      name = "work",
+      path = "~/notes/obsidian/work"
+    },
   },
 
   notes_subdir = "inbox",

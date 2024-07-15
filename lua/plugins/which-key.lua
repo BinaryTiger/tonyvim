@@ -111,7 +111,7 @@ local mappings = {
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-  ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+  ["H"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Find files",
@@ -135,7 +135,9 @@ local mappings = {
     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
     d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff" },
   },
-
+  h = {
+    name = "harpoon",
+  },
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
@@ -152,15 +154,8 @@ local mappings = {
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
     S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols" },
   },
-  n = {
-    name = "neorg",
-    c = { "<cmd>Neorg keybind all core.looking-glass.magnify-code-block<cr>", "Edit Code Block" },
-    f = { "<cmd>Telescope neorg find_linkable<cr>", "Search" },
-    l = { "<cmd>Telescope neorg insert_file_link<cr>", "Link" },
-    m = { "<cmd>Neorg update-metadata<cr>", "Update metadata" },
-    M = { "<cmd>Neorg inject-metadata<cr>", "Inject metadata" },
-    p = { "<cmd>Neorg toggle-concealer<cr>", "Toggle Concealer" },
-    t = { "<cmd>Neorg journal today<cr>", "Today's journal entry"}
+  o = {
+    name = "Obsidian",
   },
   s = {
     name = "Search",
