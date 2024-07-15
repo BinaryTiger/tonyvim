@@ -40,7 +40,6 @@
 "tree-sitter-fish" = "scm"
 "tree-sitter-lua" = "scm"
 "which-key.nvim" = "2.1.0"
-"monokai.nvim" = "scm"
 
 [plugins.harpoon]
 git = "theprimeagen/harpoon"
@@ -61,6 +60,10 @@ branch = "master"
 [plugins.gitsigns]
 git = "lewis6991/gitsigns.nvim"
 rev = "v0.9.0"
+
+[plugins.gruvbox-material]
+git = "sainnhe/gruvbox-material"
+branch = "master"
 
 [config]
 plugins_dir = "plugins/"
