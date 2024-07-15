@@ -72,12 +72,57 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
-local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
-local lspconfig = require("lspconfig")
+require("mason").setup()
+local mason_lspconfig = require("mason-lspconfig")
 
-local on_attach = function(client, bufnr)
-  require("illuminate").on_attach(client)
-end
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+local servers = {
+  -- ruby_ls = {
+  --   cmd = { "/Users/aracine/.rvm/gems/ruby-3.2.2/bin/ruby-lsp", "stdio" },
+  -- },
+  lua_ls = {},
+  taplo = {},
+  lemminx = {},
+  gopls = {
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = true,
+        gofumpt = true,
+      },
+    },
+  },
+}
+
+mason_lspconfig.setup {
+  ensure_installed = vim.tbl_keys(servers),
+}
+
+mason_lspconfig.setup_handlers {
+  function(server_name)
+    require("lspconfig")[server_name].setup {
+      capabilities = capabilities,
+      --on_attach = on_attach,
+      settings = servers[server_name],
+      filetypes = (servers[server_name] or {}).filetypes,
+    }
+  end,
+  ["ruby_ls"] = function ()
+    require("lspconfig").ruby_lsp.setup({
+      capabilities = capabilities,
+      cmd = { "/Users/aracine/.rvm/gems/ruby-3.2.2/bin/ruby-lsp", "stdio" },
+    })
+  end
+}
+
+-- require("lspconfig").ruby_lsp.setup({
+--   -- on_attach = function(client, buffer)
+--   --   setup_diagnostics(client, buffer)
+--   -- end,
+--   cmd = { "/Users/aracine/.rvm/gems/ruby-3.2.2/bin/ruby-lsp", "stdio" },
+-- })
 
 _timers = {}
 local function setup_diagnostics(client, buffer)
@@ -121,11 +166,11 @@ local function setup_diagnostics(client, buffer)
   })
 end
 
-require("lspconfig").ruby_lsp.setup({
-  on_attach = function(client, buffer)
-    setup_diagnostics(client, buffer)
-  end,
-})
+-- require("lspconfig").ruby_lsp.setup({
+--   on_attach = function(client, buffer)
+--     setup_diagnostics(client, buffer)
+--   end,
+-- })
 
 -- lspconfig.solargraph.setup({
 --   capabilities = capabilities,
@@ -153,17 +198,3 @@ require("lspconfig").ruby_lsp.setup({
 --   },
 -- })
 
-lspconfig.lua_ls.setup({})
-lspconfig.taplo.setup({})
-lspconfig.lemminx.setup({})
-lspconfig.gopls.setup({
-  settings = {
-    gopls = {
-      analyses = {
-        unusedparams = true,
-      },
-      staticcheck = true,
-      gofumpt = true,
-    },
-  },
-})
