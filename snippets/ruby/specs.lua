@@ -13,7 +13,7 @@ return {
   s({trig="ff", dscr="Expands 'ff' into '\frac{}{}'"},
     fmt(
       [[
-        multiline is a bitch<>,
+        multiline is pain<>,
         <> line 2
       ]],
       {

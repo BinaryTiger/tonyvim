@@ -22,8 +22,8 @@
 "gruvbox.nvim" = "2.0.0"
 "lualine.nvim" = "scm"
 "luasnip" = "2.3.0"
-"mason-lspconfig.nvim" = "1.29.0"
 "mason.nvim" = "scm"
+"mason-lspconfig.nvim" = "1.29.0"
 "nvim-autopairs" = "scm"
 "nvim-lspconfig" = "0.1.8"
 "nvim-tree.lua" = "1.4.0"
@@ -40,6 +40,7 @@
 "tree-sitter-fish" = "scm"
 "tree-sitter-lua" = "scm"
 "which-key.nvim" = "2.1.0"
+"monokai.nvim" = "scm"
 
 [plugins.harpoon]
 git = "theprimeagen/harpoon"
@@ -63,4 +64,4 @@ rev = "v0.9.0"
 
 [config]
 plugins_dir = "plugins/"
-auto_setup = true
+auto_setup = false
