@@ -42,28 +42,32 @@
 "which-key.nvim" = "2.1.0"
 
 [plugins.harpoon]
-git = "theprimeagen/harpoon"
+git = "github:theprimeagen/harpoon"
 branch = "harpoon2"
 
 [plugins.vim-sneak]
-git = "justinmk/vim-sneak"
+git = "github:justinmk/vim-sneak"
 rev = "1.10.0"
 
 [plugins.nvim-cmp]
-git = "hrsh7th/nvim-cmp"
+git = "github:hrsh7th/nvim-cmp"
 branch = "main"
 
 [plugins.vim-table-mode]
-git = "dhruvasagar/vim-table-mode"
+git = "github:dhruvasagar/vim-table-mode"
 branch = "master"
 
 [plugins.gitsigns]
-git = "lewis6991/gitsigns.nvim"
+git = "github:lewis6991/gitsigns.nvim"
 rev = "v0.9.0"
 
 [plugins.gruvbox-material]
-git = "sainnhe/gruvbox-material"
+git = "github:sainnhe/gruvbox-material"
 branch = "master"
+
+[plugins.vim-rspec]
+git = "github:thoughtbot/vim-rspec"
+branch = "main"
 
 [config]
 plugins_dir = "plugins/"
