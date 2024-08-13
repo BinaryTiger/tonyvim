@@ -39,6 +39,7 @@
 "toggleterm.nvim" = "2.11.0"
 "tree-sitter-fish" = "scm"
 "tree-sitter-lua" = "scm"
+"tree-sitter-go" = "scm"
 "which-key.nvim" = "2.1.0"
 
 [plugins.harpoon]

@@ -69,6 +69,9 @@ keymap("v", "<leader>ol", ":ObsidianLink<cr>", opts)
 
 -- search
 keymap("n", "<leader>of", ":ObsidianSearch<cr>", opts)
+keymap("n", "<leader>ot", ":TableModeToggle<cr>", opts)
 
 -- create
 keymap("n", "<leader>nn", ":ObsidianNew<cr>", opts)
+
+-- toggle table mode
