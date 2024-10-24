@@ -118,7 +118,14 @@ local mappings = {
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-
+  d = {
+    name = "DAP",
+    c = { "<cmd>lua require'dap'.repl.open()<cr>", "REPL"},
+    i = { "<cmd>lua require'dap'.step_over()<cr>", "Step Into"},
+    n = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over/Next"},
+    r = { "<cmd>lua require'dap'.continue()<cr>", "Execute"},
+    t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint"},
+  },
   g = {
     name = "Git",
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },

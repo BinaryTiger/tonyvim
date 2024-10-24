@@ -41,6 +41,8 @@
 "tree-sitter-lua" = "scm"
 "tree-sitter-go" = "scm"
 "which-key.nvim" = "2.1.0"
+"nvim-dap" = "0.8.0"
+nvim-dap-go = "scm"
 
 [plugins.harpoon]
 git = "github:theprimeagen/harpoon"
