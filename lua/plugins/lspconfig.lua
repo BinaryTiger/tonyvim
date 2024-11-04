@@ -109,12 +109,11 @@ mason_lspconfig.setup_handlers {
       filetypes = (servers[server_name] or {}).filetypes,
     }
   end,
-  ["ruby_ls"] = function ()
-    require("lspconfig").ruby_lsp.setup({
-      capabilities = capabilities,
-      cmd = { "/Users/aracine/.rvm/gems/ruby-3.2.2/bin/ruby-lsp", "stdio" },
-    })
-  end
+  -- ["ruby_ls"] = function () require("lspconfig").ruby_lsp.setup({
+  --     capabilities = capabilities,
+  --     cmd = { "/Users/aracine/.rvm/gems/ruby-3.2.2/bin/ruby-lsp", "stdio" },
+  --   })
+  -- end
 }
 
 -- require("lspconfig").ruby_lsp.setup({

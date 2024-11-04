@@ -12,7 +12,7 @@
 # If the plugin name contains a dot then you must add quotes to the key name!
 [plugins]
 "alpha-nvim" = "scm"
-"auto-session" = "2.0.1"
+"auto-session" = "2.5.0"
 "cmp-buffer" = "scm"
 "cmp-cmdline" = "scm"
 "cmp-nvim-lsp" = "scm"
@@ -23,26 +23,34 @@
 "lualine.nvim" = "scm"
 "luasnip" = "2.3.0"
 "mason.nvim" = "scm"
-"mason-lspconfig.nvim" = "1.29.0"
+"mason-lspconfig.nvim" = "1.31.0"
 "nvim-autopairs" = "scm"
-"nvim-lspconfig" = "0.1.8"
-"nvim-tree.lua" = "1.4.0"
-"obsidian.nvim" = "3.7.9"
+"nvim-lspconfig" = "1.0.0"
+"nvim-tree.lua" = "1.6.0"
+"obsidian.nvim" = "3.9.0"
 "plenary.nvim" = "scm"
 "popup.nvim" = "scm"
 "project.nvim" = "scm"
-"rocks-config.nvim" = "scm"
-"rocks-git.nvim" = "scm"
+"rocks-config.nvim" = "3.0.0"
+"rocks-git.nvim" = "2.5.1"
 "rocks-treesitter.nvim" = "scm"
-"rocks.nvim" = "scm"
+"rocks.nvim" = "2.41.1"
 "telescope.nvim" = "scm"
-"toggleterm.nvim" = "2.11.0"
-"tree-sitter-fish" = "scm"
-"tree-sitter-lua" = "scm"
-"tree-sitter-go" = "scm"
-"which-key.nvim" = "2.1.0"
+"toggleterm.nvim" = "2.12.0"
+"which-key.nvim" = "3.13.3"
 "nvim-dap" = "0.8.0"
-nvim-dap-go = "scm"
+"nvim-dap-go" = "scm"
+"mini.ai" = "0.9.0"
+
+[treesitter]
+auto_highlight = "all"
+# NOTE: These are parsers, not filetypes.
+auto_install = "prompt" # true | false
+
+# NOTE: These are filetypes
+disable = [
+  "lhaskell"
+]
 
 [plugins.harpoon]
 git = "github:theprimeagen/harpoon"

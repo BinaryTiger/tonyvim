@@ -13,7 +13,7 @@ local helpers = require("user.helpers")
 
 
 return {
-  s({trig="todo", dscr="Create an empty todo"},
+  s({trig="tt", dscr="Create an empty todo"},
     fmt(
       [[ - [ ] <>]],
       {
