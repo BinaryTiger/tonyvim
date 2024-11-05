@@ -1,0 +1,8 @@
+-- TODO: map for real if needed
+-- name = "Ruby",
+-- a = { "<cmd>call RunAllSpecs()<cr>", "Run Project Specs" },
+-- f = { "<cmd>call RunCurrentSpecFile()<cr>", "Run File Spec" },
+-- l = { "<cmd>call RunLastSpec()<cr>", "Run Last Spec" },
+-- n = { "<cmd>call RunNearestSpec()<cr>", "Run Nearest Spec" },
+-- t = { "<cmd>lua _RUBY_TOGGLE()<cr>", "pry" },
+-- R = { "<cmd>!ruby %:p<cr>", "Run This File" },
