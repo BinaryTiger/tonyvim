@@ -5,11 +5,11 @@ do
     -- Set up configuration options related to rocks.nvim (recommended to leave as default)
     local rocks_config = {
         rocks_path = vim.fs.normalize(install_location),
-        treesitter = {
-            auto_highlight = { },
-            auto_install = "prompt",
-            parser_map = { },
-        },
+        -- treesitter = {
+        --     auto_highlight = { },
+        --     auto_install = "prompt",
+        --     parser_map = { },
+        -- },
     }
 
     vim.g.rocks_nvim = rocks_config
