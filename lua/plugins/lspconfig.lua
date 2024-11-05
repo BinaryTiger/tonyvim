@@ -9,6 +9,22 @@ for _, sign in ipairs(signs) do
   vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
 end
 
+-- TODO map when needed
+--   a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+--   d = { "<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics" },
+--   w = { "<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics" },
+--   f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+--   i = { "<cmd>LspInfo<cr>", "Info" },
+--   I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+--   j = { "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", "Next Diagnostic" },
+--   k = { "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>", "Prev Diagnostic" },
+--   l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
+--   q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
+--   r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+--   s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+--   S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols" },
+-- },
+
 local config = {
   virtual_text = false,
   signs = {
@@ -48,7 +64,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+    --vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<A-.>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
     -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
@@ -170,30 +186,3 @@ end
 --     setup_diagnostics(client, buffer)
 --   end,
 -- })
-
--- lspconfig.solargraph.setup({
---   capabilities = capabilities,
---   on_attach = on_attach,
---   --cmd = { "/Users/aracine/.rvm/gems/ruby-3.2.2/bin/solargraph", "stdio" },
---   -- this is disabled since I'm using rvm instead of the assumed rbenv
---   cmd = { "solargraph", "stdio" },
---   filetypes = { "ruby", "rakefile" },
---   init_options = {
---     formatting = false,
---   },
---   --root_dir = require("lspconfig").util.root_pattern("Gemfile", ".git"),
---   settings = {
---     solargraph = {
---       autoformat = false,
---       completion = true,
---       diagnostic = true,
---       references = true,
---       rename = false,
---       symbols = true,
---       useBundler = true,
---       --definition = true,
---       --declaration = true,
---     },
---   },
--- })
-

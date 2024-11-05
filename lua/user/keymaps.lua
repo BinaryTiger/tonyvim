@@ -51,3 +51,9 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+
+-- Leader Utils
+local map = require("user.helpers").leader_map
+map("c", "<cmd>Bdelete!<CR>", "Close Buffer")
+map("H", "<cmd>nohlsearch<CR>", "Hide Highlight")
+map("CC","<cmd>%bdelete|edit #|normal`\"<cr>", "Close All Other Buffers")

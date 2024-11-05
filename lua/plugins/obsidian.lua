@@ -1,3 +1,7 @@
+local map = require("user.helpers").leader_map
+local vmap = require("user.helpers").v_leader_map
+
+-- toggle table mode
 require("obsidian").setup({
   workspaces = {
     {
@@ -56,22 +60,18 @@ require("obsidian").setup({
   }
 })
 
-local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
-
 -- link and create
-keymap("n", "<leader>on", "viw :ObsidianLinkNew<cr>", opts)
-keymap("v", "<leader>on", ":ObsidianLinkNew<cr>", opts)
+map("wn", "viw :ObsidianLinkNew<cr>", "New Link")
+vmap("wn", ":ObsidianLinkNew<cr>", "New Link")
 
 -- link only
-keymap("n", "<leader>ol", "viw :ObsidianLink<cr>", opts)
-keymap("v", "<leader>ol", ":ObsidianLink<cr>", opts)
+map("wl", "viw :ObsidianLink<cr>", "Link")
+vmap("wl", ":ObsidianLink<cr>", "Link")
 
 -- search
-keymap("n", "<leader>of", ":ObsidianSearch<cr>", opts)
-keymap("n", "<leader>ot", ":TableModeToggle<cr>", opts)
+map("wf", ":ObsidianSearch<cr>", "Search")
+map("wt", ":TableModeToggle<cr>", "Toggle Table Mode")
 
 -- create
-keymap("n", "<leader>nn", ":ObsidianNew<cr>", opts)
+map("ww", ":ObsidianNew<cr>", "New")
 
--- toggle table mode

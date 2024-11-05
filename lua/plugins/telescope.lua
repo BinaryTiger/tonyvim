@@ -1,4 +1,23 @@
 local actions = require("telescope.actions")
+local map = require("user.helpers").leader_map
+
+map("b", "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find Buffers")
+map("f", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find Files")
+map("F", "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" )
+
+map("sC", "<cmd>Telescope commands<cr>", "Commands")
+map("sM", "<cmd>Telescope man_pages<cr>", "Man Pages")
+map("sR", "<cmd>Telescope oldfiles<cr>", "Open Recent File")
+map("sS", "<cmd>Telescope session-lens search_session<cr>", "Sessions")
+map("sb", "<cmd>Telescope git_branches<cr>", "Git Branches")
+map("sc", "<cmd>Telescope colorscheme<cr>", "Colorscheme")
+map("sh", "<cmd>Telescope help_tags<cr>", "Find Help")
+map("sk", "<cmd>Telescope keymaps<cr>", "Keymaps")
+map("sm", "<cmd>Telescope marks", "Find Marks")
+map("sr", "<cmd>Telescope registers<cr>", "Registers")
+map("ss", "<cmd>Telescope grep_string<cr>", "Grep String")
+map("sc", "<cmd>Telescope git_commits<cr>", "Commit")
+map("sP", "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Find Projects")
 
 require("telescope").setup({
   defaults = {

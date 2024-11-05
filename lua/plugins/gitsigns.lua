@@ -1,3 +1,16 @@
+local map = require("user.helpers").leader_map
+
+map("gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit")
+map("gj", "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk")
+map("gk", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk")
+map("gl", "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame")
+map("gp", "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk")
+map("gr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk")
+map("gR", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer")
+map("gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk")
+map("gu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk")
+map("gd", "<cmd>Gitsigns diffthis HEAD<cr>", "Diff")
+
 require("gitsigns").setup({
   signs = {
     add = { hl = "GitSignsAdd", text = "▎", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
