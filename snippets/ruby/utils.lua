@@ -15,11 +15,6 @@ return {
       t("Rails.logger.error(\"[ARACINE] "),i(1),t("\")")
     }
   ),
-  s({trig="flog", dscr="Easy Frizzle Logging for Debug"},
-    {
-      t("Frizzle.logger.error(\"[ARACINE] "),i(1),t("\")")
-    }
-  ),
   s({trig="log", dscr="Easy Puts Logging for Debug"},
     {
       t("puts \"[ARACINE] "),i(1),t("\"")

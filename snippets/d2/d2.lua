@@ -21,7 +21,7 @@ return {
           width: 75
         }
       ]],
-      { 
+      {
         i(1),
         rep(1),
         c(2, {t("png"), t("webp"), t("svg")}),

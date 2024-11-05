@@ -10,8 +10,6 @@ local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
 local helpers = require("user.helpers")
 
-
-
 return {
   s({trig="tt", dscr="Create an empty todo"},
     fmt(
