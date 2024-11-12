@@ -46,6 +46,10 @@ disable = [
   "lhaskell"
 ]
 
+[plugins.code-companion]
+git = "github:olimorris/codecompanion.nvim"
+rev = "v9.5.1"
+
 [plugins.harpoon]
 git = "github:theprimeagen/harpoon"
 branch = "harpoon2"
