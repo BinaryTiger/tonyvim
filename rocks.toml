@@ -4,6 +4,7 @@
 
 # List of Neovim plugins to install alongside their versions.
 [plugins]
+"rocks-treesitter.nvim" = "1.2.0"
 "alpha-nvim" = "scm"
 "auto-session" = "2.5.0"
 "cmp-buffer" = "scm"
@@ -26,7 +27,6 @@
 "project.nvim" = "scm"
 "rocks-config.nvim" = "3.0.0"
 "rocks-git.nvim" = "2.5.1"
-"rocks-treesitter.nvim" = "scm"
 "rocks.nvim" = "2.41.1"
 "telescope.nvim" = "scm"
 "toggleterm.nvim" = "2.12.0"
@@ -35,11 +35,16 @@
 "mini.ai" = "0.9.0"
 "go.nvim" = "0.9.0"
 "mini.clue" = "0.14.0"
+nvim-treesitter = "scm"
+tree-sitter-toml = "0.0.30"
+tree-sitter-go = "0.0.35"
+tree-sitter-gomod = "0.0.30"
  
 [treesitter]
 auto_highlight = "all"
 # NOTE: These are parsers, not filetypes.
 auto_install = "prompt" # true | false
+config_path = "rocks-treesitter.toml"
 
 # NOTE: These are filetypes
 disable = [

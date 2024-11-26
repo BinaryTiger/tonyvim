@@ -54,6 +54,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Leader Utils
 local map = require("user.helpers").leader_map
-map("c", "<cmd>Bdelete!<CR>", "Close Buffer")
+map("c", "<cmd>bdelete!<CR>", "Close Buffer")
 map("H", "<cmd>nohlsearch<CR>", "Hide Highlight")
 map("CC","<cmd>%bdelete|edit #|normal`\"<cr>", "Close All Other Buffers")
