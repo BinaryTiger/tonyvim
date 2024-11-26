@@ -35,10 +35,10 @@
 "mini.ai" = "0.9.0"
 "go.nvim" = "0.9.0"
 "mini.clue" = "0.14.0"
-nvim-treesitter = "scm"
-tree-sitter-toml = "0.0.30"
-tree-sitter-go = "0.0.35"
-tree-sitter-gomod = "0.0.30"
+"nvim-treesitter" = "scm"
+"tree-sitter-toml" = "0.0.30"
+"tree-sitter-go" = "0.0.35"
+"tree-sitter-gomod" = "0.0.30"
  
 [treesitter]
 auto_highlight = "all"
