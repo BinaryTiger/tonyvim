@@ -37,3 +37,6 @@ vim.opt.guifont = "monospace:h17"               -- the font used in graphical ne
 vim.opt.shortmess:append("c")
 vim.opt.iskeyword:append("-")
 vim.cmd("set whichwrap+=<,>,[,],h,l")
+
+-- legacy vim plugins options
+vim.g["table_mode_disable_mappings"] = 1

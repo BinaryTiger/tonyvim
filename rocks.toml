@@ -39,6 +39,13 @@
 "tree-sitter-toml" = "0.0.30"
 "tree-sitter-go" = "0.0.35"
 "tree-sitter-gomod" = "0.0.30"
+tree-sitter-yaml = "0.0.29"
+tree-sitter-fish = "0.0.29"
+tree-sitter-nix = "0.0.50"
+tree-sitter-gosum = "0.0.29"
+tree-sitter-ruby = "0.0.33"
+tree-sitter-yuck = "0.0.29"
+tree-sitter-kdl = "0.0.29"
  
 [treesitter]
 auto_highlight = "all"
