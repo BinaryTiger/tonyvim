@@ -21,4 +21,26 @@ return {
     }
   ),
   --s("test", t("a test snippet"))
+  s({trig="cread", dscr="Read STDIN from console"},
+    fmt(
+      [[
+        print "->"
+        prompt = $stdin.gets.chomp
+        {}
+      ]],
+      {
+        i(1),
+      })),
+
+  s({trig="fread", dscr="Read text from file"},
+    fmt(
+      [[
+        ARGF.each_line do |line|
+          # process
+          {}
+        end
+      ]],
+      {
+        i(1),
+      })),
 }

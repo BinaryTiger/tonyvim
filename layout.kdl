@@ -1,0 +1,22 @@
+layout {
+  cwd "/home/$USER/src/tonyvim"
+  pane split_direction="horizontal" {
+    pane {
+      plugin location="zellij:tab-bar"
+      size 1
+      borderless true
+    }
+    pane split_direction="vertical" {
+      pane {
+        command "nvim"
+        focus true
+        size "100%"
+      }
+    }
+    pane {
+      plugin location="zellij:status-bar"
+      size 1
+      borderless true
+    }
+  }
+}
