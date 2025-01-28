@@ -7,11 +7,6 @@
 "rocks-treesitter.nvim" = "1.2.0"
 "alpha-nvim" = "scm"
 "auto-session" = "2.5.0"
-"cmp-buffer" = "scm"
-"cmp-cmdline" = "scm"
-"cmp-nvim-lsp" = "scm"
-"cmp-path" = "scm"
-"cmp_luasnip" = "scm"
 "comment.nvim" = "0.8.0"
 "gruvbox.nvim" = "2.0.0"
 "lualine.nvim" = "scm"
@@ -51,6 +46,7 @@ tree-sitter-capnp = "0.0.29"
 tree-sitter-beancount = "0.0.30"
 tree-sitter-gitignore = "0.0.29"
 tree-sitter-c_sharp = "0.0.36"
+tree-sitter-ini = "0.0.29"
  
 [treesitter]
 auto_highlight = "all"
@@ -79,9 +75,9 @@ rev = "1.10.0"
 git = "github:metiulekm/nvim-treesitter-endwise"
 branch = "master"
 
-[plugins.nvim-cmp]
-git = "github:hrsh7th/nvim-cmp"
-branch = "main"
+[plugins.blink]
+git = "github:saghen/blink.cmp"
+rev = "v0.11.0"
 
 [plugins.vim-table-mode]
 git = "github:dhruvasagar/vim-table-mode"

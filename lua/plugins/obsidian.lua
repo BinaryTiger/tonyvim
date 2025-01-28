@@ -26,7 +26,7 @@ require("obsidian").setup({
   },
   -- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
   completion = {
-    nvim_cmp = true,
+    nvim_cmp = false,
     -- Trigger completion at 2 chars.
     min_chars = 2,
   },
