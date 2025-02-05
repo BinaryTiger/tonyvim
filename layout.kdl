@@ -9,7 +9,7 @@ layout {
           plugin location="zellij:status-bar"
       }
   }
-  tab name="[WORKSHOP]" cwd="/home/$USER/src/tonyvim" hide_floating_panes=true {
+  tab name="[WORKSHOP]" cwd="/home/$USER/src/tonyvim" {
       pane split_direction="vertical" {
         pane {
           command "nvim"
@@ -20,7 +20,7 @@ layout {
           size "20%"
         }
       }
-    floating_panes {
+    floating_panes hide_floating_panes=true {
       pane {
         name "[GIT]"
         command "lazygit"
@@ -33,7 +33,8 @@ layout {
       }
     }
   }
-  tab name="[CASETTE]" cwd="/home/$USER/src/retro-casette" {
+  tab name="[CASETTE]" {
+    cwd "/home/$USER/src/retro-casette"
     pane {
       command "nvim"
       focus true
