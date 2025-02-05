@@ -27,6 +27,7 @@ layout {
       pane {
         name "GIT"
         command "lazygit"
+        floating true
         //close_on_exit true
         x "12%"
         y "12%"
@@ -35,6 +36,7 @@ layout {
       }
       pane {
         name "TERM"
+        floating true
         x "12%"
         y "12%"
         width "75%"
