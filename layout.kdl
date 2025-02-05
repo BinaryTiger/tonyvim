@@ -33,8 +33,7 @@ layout {
       }
     }
   }
-  tab name="[CASETTE]" {
-    cwd "/home/$USER/src/retro-casette"
+  tab name="[CASETTE]" cwd="/home/$USER/src/retro-casette" {
     pane {
       command "nvim"
       focus true
