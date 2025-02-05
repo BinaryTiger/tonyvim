@@ -1,0 +1,5 @@
+vim.api.nvim_set_keymap("n", "<Space>t", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Space>T", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("x", "<Space>T", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Space>tt", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("x", "<Space>tt", "<Nop>", { noremap = true, silent = true })
