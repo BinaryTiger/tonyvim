@@ -46,3 +46,4 @@ plugin/packer_compiled.lua
 spell/en.utf-8.add
 spell/en.utf-8.add.spl
 .aider*
+beancount.lua
