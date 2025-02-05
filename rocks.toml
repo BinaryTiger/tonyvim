@@ -8,7 +8,6 @@
 "alpha-nvim" = "scm"
 "auto-session" = "2.5.0"
 "comment.nvim" = "0.8.0"
-"gruvbox.nvim" = "2.0.0"
 "lualine.nvim" = "scm"
 "mason.nvim" = "scm"
 "mason-lspconfig.nvim" = "1.31.0"
