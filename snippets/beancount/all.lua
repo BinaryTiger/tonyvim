@@ -1,11 +1,7 @@
-local function today()
-  return os.date("%Y-%m-%d")
-end
-
 return {
   bcadd = {
     body = [[
-${=today()} * "${1}"
+${=os.date("%Y-%m-%d")} * "${1}"
   ${2} -${3} CAD
   ${4} ${3} CAD]],
     show_condition = function() return vim.bo.filetype == 'beancount' end
@@ -13,7 +9,7 @@ ${=today()} * "${1}"
   
   bccondofee = {
     body = [[
-${=today()} * "Condo Fee ${1}"
+${=os.date("%Y-%m-%d")} * "Condo Fee ${1}"
   Assets:Tangerine:Checking -${2} CAD
   Expenses:473Langelier:Fee ${2} CAD
 ${3}]],
@@ -22,7 +18,7 @@ ${3}]],
   
   bcmortg = {
     body = [[
-${=today()} * "Mortgage Payment"
+${=os.date("%Y-%m-%d")} * "Mortgage Payment"
   Assets:Tangerine:Checking              -${1} CAD
   Expenses:473Langelier:Interests         ${2} CAD
   Expenses:473Langelier:Taxes             ${3} CAD
@@ -32,7 +28,7 @@ ${=today()} * "Mortgage Payment"
   
   bccc = {
     body = [[
-${=today()} * "${1}"
+${=os.date("%Y-%m-%d")} * "${1}"
   Liabilities:Tangerine:CreditCard       -${2} CAD
   Expenses:${3}         ${2} CAD]],
     show_condition = function() return vim.bo.filetype == 'beancount' end
