@@ -7,16 +7,38 @@ layout {
       borderless true
     }
     pane split_direction="vertical" {
-      pane {
-        command "nvim"
-        focus true
-        size "100%"
-      }
+        pane {
+          command "nvim"
+          focus true
+          size "80%"
+        }
+        pane {
+          command "aider"
+          size "20%"
+        }
     }
     pane {
       plugin location="zellij:status-bar"
       size 1
       borderless true
+    }
+  }
+  floating_panes {
+      pane {
+        name "GIT"
+        command "lazygit"
+        //close_on_exit true
+        x "12%"
+        y "12%"
+        width "75%"
+        height "75%"
+      }
+      pane {
+        name "TERM"
+        x "12%"
+        y "12%"
+        width "75%"
+        height "75%"
     }
   }
 }
