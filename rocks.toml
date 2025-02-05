@@ -10,7 +10,6 @@
 "comment.nvim" = "0.8.0"
 "gruvbox.nvim" = "2.0.0"
 "lualine.nvim" = "scm"
-"luasnip" = "2.3.0"
 "mason.nvim" = "scm"
 "mason-lspconfig.nvim" = "1.31.0"
 "nvim-autopairs" = "scm"
@@ -47,6 +46,7 @@ tree-sitter-beancount = "0.0.30"
 tree-sitter-gitignore = "0.0.29"
 tree-sitter-c_sharp = "0.0.36"
 tree-sitter-ini = "0.0.29"
+"mini.snippets" = "0.15.0"
  
 [treesitter]
 auto_highlight = "all"
