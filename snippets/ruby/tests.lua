@@ -1,7 +1,8 @@
 return {
-  minifile = {
-    -- minitest file scaffolding
-    [[require 'minitest/autorun'
+  {
+    prefix = 'minifile',
+    body = [[
+require 'minitest/autorun'
 
 class Test${1} < Minitest::Test
   def setup
@@ -11,11 +12,18 @@ class Test${1} < Minitest::Test
   def test_example
     assert_equal "return value", @subject.method?
   end
-end]],
+end
+    ]],
+    desc = 'a test file'
   },
-  minitest = {
-    [[def test_${1}
+  {
+    prefix = 'minitest',
+    body = [[
+def test_${1}
   ${2}
-end]],
-  },
+end
+    ]],
+    desc = 'a test',
+  }
 }
+

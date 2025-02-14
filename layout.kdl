@@ -1,4 +1,5 @@
 layout {
+  cwd "/home/$USER/src"
   default_tab_template {
       // the default zellij tab-bar and status bar plugins
       pane size=1 borderless=true {
@@ -9,7 +10,7 @@ layout {
           plugin location="zellij:status-bar"
       }
   }
-  tab name="[WORKSHOP]" cwd="/home/$USER/src/tonyvim" {
+  tab name="[WORKSHOP]" hide_floating_panes=true cwd="tonyvim" {
       pane split_direction="vertical" {
         pane {
           command "nvim"
@@ -20,11 +21,10 @@ layout {
           size "20%"
         }
       }
-    floating_panes hide_floating_panes=true {
-      pane {
+    floating_panes {
+      pane cwd="tonyvim" {
         name "[GIT]"
         command "lazygit"
-        floating true
         //close_on_exit true
         x "12%"
         y "12%"
@@ -33,10 +33,9 @@ layout {
       }
     }
   }
-  tab name="[CASETTE]" cwd="/home/$USER/src/retro-casette" {
+  tab name="[CASSETTE]" cwd="retro-cassette" {
     pane {
       command "nvim"
-      focus true
       size "80%"
     }
   }
