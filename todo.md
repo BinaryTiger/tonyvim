@@ -1,3 +1,2 @@
 - [ ] Change LuaLine z from progress -> LspInfo
-- [ ] Change tree to oil.nvim
 - [ ] change sneak for flash

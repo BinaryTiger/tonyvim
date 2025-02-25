@@ -57,3 +57,4 @@ local map = require("user.helpers").leader_map
 map("c", "<cmd>bdelete<CR>", "Close Buffer")
 map("H", "<cmd>nohlsearch<CR>", "Hide Highlight")
 map("CC","<cmd>%bdelete|edit #|normal`\"<cr>", "Close All Other Buffers")
+map("e", "<cmd>lua MiniFiles.open()<cr>", "Explorer" )
