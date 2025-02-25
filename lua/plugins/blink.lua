@@ -29,6 +29,12 @@ require("blink.cmp").setup({
         preselect = false,
       },
     },
+    documentation = {
+      auto_show = true,
+      auto_show_delay_ms = 250,
+      treesitter_highlighting = true,
+      window = { border = "rounded" },
+    },
     trigger = {
       show_in_snippet = true,
     },
